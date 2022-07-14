@@ -1,29 +1,19 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int first=0;
-        int second=1;
+        // O(n) time | O(n) space
+        HashMap<Integer, Integer> myMap = new HashMap<>();
         
-        int[] res=new int[2];
-        boolean found=false;
-        int sum=0;
-                
-        while(!found){
-            if(second == nums.length){
-                first++;
-                second=first+1;
-            }
+        // update map
+        for(int i = 0; i < nums.length; i++)
+            myMap.put(nums[i], i);
+        
+        for(int i = 0; i < nums.length; i++)
+        {
+            int found = target - nums[i];
             
-            sum=nums[first]+nums[second];
-            
-            if(sum==target){
-                res[0]=first;
-                res[1]=second;
-                found=true;
-            }
-            sum=0;
-            second++;
+            if(myMap.containsKey(found) && i != myMap.get(found))
+                return new int[] {i, myMap.get(found)};
         }
-        
-        return res;
+        throw new IllegalArgumentException("No Solution !");
     }
 }
