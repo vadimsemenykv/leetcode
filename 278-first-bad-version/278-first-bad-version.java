@@ -3,13 +3,23 @@
 
 public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
-        //we will use binary search lower_bound variant
+        // We will use binary search lower_bound variant
+        
+        // If nth version is not a bad version, then all versions are good.
+        if (n <= 0 || !isBadVersion(n)) {
+            return -1;
+        }
+        // If first version is a bad version, then all versions are bad.
+        if (isBadVersion(1)) {
+            return 1;
+        }
+        
         int start = 0;
         int end = n;
-        while (start <= end) {
+        while (start < end) {
             int mid = start + (end - start) / 2;
             if (isBadVersion(mid)) {
-                end = mid - 1;
+                end = mid;
             } else {
                 start = mid + 1;
             }
