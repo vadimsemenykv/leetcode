@@ -1,19 +1,29 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // O(n) time | O(n) space
-        HashMap<Integer, Integer> myMap = new HashMap<>();
-        
-        // update map
-        for(int i = 0; i < nums.length; i++)
-            myMap.put(nums[i], i);
-        
-        for(int i = 0; i < nums.length; i++)
-        {
-            int found = target - nums[i];
-            
-            if(myMap.containsKey(found) && i != myMap.get(found))
-                return new int[] {i, myMap.get(found)};
+        //Brutforce
+        //Two pointer solution
+        if (nums == null || nums.length <= 1) {
+            return null;
         }
-        throw new IllegalArgumentException("No Solution !");
+        if (nums.length == 2) {
+            return (nums[0] + nums[1]) == target ? new int[] {0, 1} : null;
+        }
+        
+        int p1 = 0;
+        int p2 = 0;
+        
+        while (p1 <= (nums.length - 2)) {
+            p2 = p1 + 1;
+            int numberToFind = target - nums[p1];
+            while (p2 <= (nums.length - 1)) {
+                if (nums[p2] == numberToFind) {
+                    return new int[] {p1, p2};
+                }
+                p2++;
+            }
+            p1++;
+        }
+        
+        return null;
     }
 }
