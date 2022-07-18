@@ -1,7 +1,6 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        //Brutforce
-        //Two pointer solution
+        //Memoization
         if (nums == null || nums.length <= 1) {
             return null;
         }
@@ -9,19 +8,16 @@ class Solution {
             return (nums[0] + nums[1]) == target ? new int[] {0, 1} : null;
         }
         
-        int p1 = 0;
-        int p2 = 0;
+        Map<Integer, Integer> processed = new HashMap<>();
+        int p = 0;
         
-        while (p1 <= (nums.length - 2)) {
-            p2 = p1 + 1;
-            int numberToFind = target - nums[p1];
-            while (p2 <= (nums.length - 1)) {
-                if (nums[p2] == numberToFind) {
-                    return new int[] {p1, p2};
-                }
-                p2++;
+        while (p < nums.length) {
+            int numberToFind = target - nums[p];
+            if (processed.containsKey(numberToFind)) {
+                return new int[] {p, processed.get(numberToFind)};
             }
-            p1++;
+            processed.put(nums[p], p);
+            p++;
         }
         
         return null;
