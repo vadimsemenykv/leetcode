@@ -4,20 +4,23 @@ class Solution {
         if (s.length() <= 1) {
             return s.length();
         }
-        Map<Character, Integer> chars = new HashMap<>();
+        
+        Map<Character, Integer> seen = new HashMap<>();
         int max = 0;
-        int p = 0;
-        while (p < s.length()) {
-            if (!chars.containsKey(s.charAt(p))) {
-                chars.put(s.charAt(p), p);
-                p++;
-            } else {
-                p = chars.get(s.charAt(p)) + 1;
-                max = Math.max(chars.size(), max);
-                chars = new HashMap<>();
+        int left = 0;
+        for (int right = 0; right < s.length(); right++) {
+            char currentChar = s.charAt(right);
+            Integer previouslySeenAt = seen.get(currentChar);
+            
+            if (previouslySeenAt != null && previouslySeenAt >= left) {
+                left = previouslySeenAt + 1;
             }
+            
+            seen.put(currentChar, right);
+            
+            max = Math.max(max, right - left + 1);
         }
         
-        return Math.max(chars.size(), max);
+        return max;
     }
 }
