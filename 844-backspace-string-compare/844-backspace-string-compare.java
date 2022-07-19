@@ -40,16 +40,16 @@ class Solution {
         return p >= 0 ? s.charAt(p) : Character.MIN_VALUE; 
     }
         
-    private List<Character> process(String s) {
-        List<Character> chars = new LinkedList<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c == '#') {
-                if (chars.size() > 0) chars.remove(chars.size() - 1);
-            } else {
-                chars.add(c);
-            }
-        }
-        return chars;
-    }
+    // private List<Character> process(String s) {
+    //     List<Character> chars = new LinkedList<>();
+    //     for (int i = 0; i < s.length(); i++) {
+    //         char c = s.charAt(i);
+    //         if (c == '#') {
+    //             if (chars.size() > 0) chars.remove(chars.size() - 1);
+    //         } else {
+    //             chars.add(c);
+    //         }
+    //     }
+    //     return chars;
+    // }
 }
