@@ -1,5 +1,13 @@
 class Solution {
     public boolean backspaceCompare(String s, String t) {
+        //Two pointer solution T: O(n), S: O(1)
+        return twoPointerComaring(s, t);
+        
+        //Brute Force solution T: O(n), S: O(n)
+        // return process(s).equals(process(t));
+    }
+    
+    private boolean twoPointerComaring(String s, String t) {
         int p1 = s.length() - 1;
         int p2 = t.length() - 1;
         while (p1 >= 0 || p2 >= 0) {
@@ -26,7 +34,6 @@ class Solution {
         }
 
         return true;
-        // return process(s).equals(process(t));
     }
     
     private Character getCharSafely(String s, int p) {
