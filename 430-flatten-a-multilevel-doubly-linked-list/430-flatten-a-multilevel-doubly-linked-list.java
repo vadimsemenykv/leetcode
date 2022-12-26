@@ -10,37 +10,28 @@ class Node {
 
 class Solution {
     public Node flatten(Node head) {
-        Node current = head;
-        Node last = null;
-        boolean directionToRight = true;
-        
+        Node current = head , childNode = null;
+
         while (current != null) {
             if (current.child != null) {
-                if (directionToRight) {
-                    var tail = current.next;
-                    current.next = current.child;
-                    current.next.prev = current;
-                    current.child = tail;
-                } else {
-                    last.next = current.child;
-                    current.child = null;
-                    last.next.prev = last;
-                    directionToRight = true;
+                childNode = current.child;
+                
+                while (childNode.next !=null) {
+                    childNode = childNode.next ;
                 }
+
+                if (current.next !=null) { 
+                    childNode.next = current.next; 
+                    current.next.prev = childNode;
+                }
+                
+                current.child.prev = current;
+                current.next = current.child;
+                current.child = null;
             }
             
-            if (current.next == null) {
-                directionToRight = false;
-                last = current;
-            }
-            
-            if (directionToRight) {
-                current = current.next;
-            } else {
-                current = current.prev;
-            }    
+            current = current.next;
         }
-        
-        return head;
+        return head ;
     }
 }
