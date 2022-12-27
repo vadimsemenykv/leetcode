@@ -11,19 +11,46 @@
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        if (head == null || head.next == null) {
+//         if (head == null || head.next == null) {
+//             return null;
+//         }
+        
+//         var current = head;
+//         Set<ListNode> checkedNodes = new HashSet();
+
+        
+//         while (!checkedNodes.contains(current) && current != null) {
+//             checkedNodes.add(current);
+//             current = current.next;
+//         }
+        
+//         return current;
+        
+        var tortoise = head;
+        var hare = head;
+        boolean met = false;
+        
+        while (!met && hare != null && hare.next != null) {
+            tortoise = tortoise.next;
+            hare = hare.next.next;
+            
+            if (tortoise.equals(hare)) {
+                met = true;
+            }
+        }
+        
+        if (!met) {
             return null;
         }
         
-        var current = head;
-        Set<ListNode> checkedNodes = new HashSet();
-
+        var p1 = head;
+        var p2 = tortoise;
         
-        while (!checkedNodes.contains(current) && current != null) {
-            checkedNodes.add(current);
-            current = current.next;
+        while (!p1.equals(p2)) {
+            p1 = p1.next;
+            p2 = p2.next;
         }
         
-        return current;
+        return p1;
     }
 }
