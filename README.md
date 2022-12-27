@@ -17,3 +17,8 @@
 13. <a href="https://leetcode.com/problems/reverse-linked-list-ii/">Reverse Linked List II #92</a> - Medium
 14. <a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List #430</a> - Medium
 15. <a href="https://leetcode.com/problems/linked-list-cycle-ii/">Linked List Cycle II #142</a> - Medium
+
+
+## Used Algotithms
+#### Floyd's cycle detection algorithm (Tortoise and hare)
+ - 15
