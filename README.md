@@ -1,6 +1,5 @@
 # leetcode
-##### Easy: 10 | Medium: 6 | Hard: 1
-##### Total: 17
+##### Easy: 11 | Medium: 6 | Hard: 1
 
 1. <a href="https://leetcode.com/problems/two-sum/">Two Sum #1</a> - Easy
 2. <a href="https://leetcode.com/problems/binary-search/">Binary Search #704</a> - Easy
@@ -19,6 +18,7 @@
 15. <a href="https://leetcode.com/problems/linked-list-cycle-ii/">Linked List Cycle II #142</a> - Medium
 16. <a href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses #20</a> - Easy
 17. <a href="https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses #1249</a> - Medium
+18. <a href="https://leetcode.com/problems/implement-queue-using-stacks/">Implement Queue using Stacks #232</a> - Easy
 
 
 ## Used Algotithms & Data structures
@@ -27,3 +27,4 @@
 #### Stack & Queue
  - 16
  - 17
+ - 18
