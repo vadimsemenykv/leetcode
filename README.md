@@ -1,6 +1,6 @@
 # leetcode
-##### Easy: 10 | Medium: 5 | Hard: 1
-##### Total: 16
+##### Easy: 10 | Medium: 6 | Hard: 1
+##### Total: 17
 
 1. <a href="https://leetcode.com/problems/two-sum/">Two Sum #1</a> - Easy
 2. <a href="https://leetcode.com/problems/binary-search/">Binary Search #704</a> - Easy
@@ -18,10 +18,12 @@
 14. <a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List #430</a> - Medium
 15. <a href="https://leetcode.com/problems/linked-list-cycle-ii/">Linked List Cycle II #142</a> - Medium
 16. <a href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses #20</a> - Easy
+17. <a href="https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses #1249</a> - Medium
 
 
-## Used Algotithms
+## Used Algotithms & Data structures
 #### Floyd's cycle detection algorithm (Tortoise and hare)
  - 15
 #### Stack & Queue
  - 16
+ - 17
