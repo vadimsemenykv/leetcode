@@ -5,26 +5,26 @@ class QuickSort {
   
   private void sort(int[] nums, int low, int high) {
     if (low < high) {
-      var pivotIndex = partition(nums, low, high);
+      var partitionIndex = partition(nums, low, high);
 
-      sort(nums, low, pivotIndex - 1);
-      sort(nums, pivotIndex + 1, high);
+      sort(nums, low, partitionIndex - 1);
+      sort(nums, partitionIndex + 1, high);
     }
   }
     
   private int partition(int[] nums, int low, int high) {
     var pivot = nums[high];
-    var i = low - 1;
+    var partitionIndex = low;
 
     for (var j = low; j < high; j++) {
       if (nums[j] < pivot) {
-        i++;
-        swap(nums, i, j);
+        swap(nums, partitionIndex, j);
+        partitionIndex++;
       }
     }
-    swap(nums, i + 1, high);
+    swap(nums, partitionIndex, high);
 
-    return i + 1;
+    return partitionIndex;
   }
 
   private void swap(int[] nums, int i, int j) {
