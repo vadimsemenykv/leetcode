@@ -1,5 +1,5 @@
 # leetcode
-##### Easy: 11 | Medium: 7 | Hard: 1
+##### Easy: 11 | Medium: 8 | Hard: 1
 
 1. <a href="https://leetcode.com/problems/two-sum/">Two Sum #1</a> - Easy
 2. <a href="https://leetcode.com/problems/binary-search/">Binary Search #704</a> - Easy
@@ -20,6 +20,7 @@
 17. <a href="https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses #1249</a> - Medium
 18. <a href="https://leetcode.com/problems/implement-queue-using-stacks/">Implement Queue using Stacks #232</a> - Easy
 19. <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">Kth Largest Element in an Array #215</a> - Medium
+20. <a href="https://leetcode.com/problems/top-k-frequent-elements/">Top K Frequent Elements #347</a></h2> - Medium
 
 
 ## Used Algotithms & Data structures
@@ -31,3 +32,5 @@
  - 18
 #### Quick sort
  - 19
+#### HashMap
+ - 20
