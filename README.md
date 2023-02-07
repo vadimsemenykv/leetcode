@@ -1,5 +1,5 @@
 # leetcode
-##### Easy: 11 | Medium: 8 | Hard: 1
+##### Easy: 11 | Medium: 9 | Hard: 1
 
 1. <a href="https://leetcode.com/problems/two-sum/">Two Sum #1</a> - Easy
 2. <a href="https://leetcode.com/problems/binary-search/">Binary Search #704</a> - Easy
@@ -21,6 +21,7 @@
 18. <a href="https://leetcode.com/problems/implement-queue-using-stacks/">Implement Queue using Stacks #232</a> - Easy
 19. <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">Kth Largest Element in an Array #215</a> - Medium
 20. <a href="https://leetcode.com/problems/top-k-frequent-elements/">Top K Frequent Elements #347</a></h2> - Medium
+21. <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array #34</a> - Medium
 
 
 ## Used Algotithms & Data structures
@@ -34,3 +35,5 @@
  - 19
 #### HashMap
  - 20
+#### Binary search
+ - 21
