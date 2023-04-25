@@ -3,7 +3,10 @@ class Solution {
         var set1 = fromArray(nums1);
         var set2 = fromArray(nums2);
         
-        return (set1.size() < set2.size() ? intersect(set1, set2) : intersect(set1, set2))
+        var small = set1.size() < set2.size() ? set1 : set2;
+        var big = set1.size() >= set2.size() ? set1 : set2;
+        
+        return intersect(small, big)
             .stream()
             .mapToInt(i -> i)
             .toArray();
